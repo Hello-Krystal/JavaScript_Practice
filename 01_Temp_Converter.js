@@ -9,9 +9,9 @@ console.log(`If today's temperature is ${kelvin} Kelvin then today's temperature
 // This calculates Fahrenheit and rounds down the fahrenheit temperature.
 let fahrenheit = celsius * (9/5) + 32;
 fahrenheit = Math.floor(fahrenheit);
-console.log(`The temperature is ${fahrenheit} degrees Fahrenheit.\n`);
+console.log(`If today's temperature is ${celsius} Celsius, then today's temperature in Fahrenheit would be ${fahrenheit} degrees Fahrenheit.\n`);
 
 // Extra Practice - Converts celsius to the Newton scale
 let newton = celsius * (33/100);
 newton = Math.floor(newton);
-console.log(`If the temperature today is ${celsius} degrees Celsius then the temperature on the Newton scale would be ${newton} degrees Newton.`);
+console.log(`If the temperature today is ${celsius} degrees Celsius then the temperature on the Newton scale would be ${newton} Newton.`);
