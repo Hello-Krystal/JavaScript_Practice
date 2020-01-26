@@ -7,3 +7,10 @@ userName ? console.log(`Hello, ${userName}!`) : console.log('Hello, stranger! Te
 // variable for user question
 let userQuestion = "'Is daily practice important?'";
 console.log(`${userName} just asked ${userQuestion}`);
+
+// created random number generator
+randomNumber = Math.floor(Math.random() * 8);
+// Math.random() * 8 returns a value between 0 and 7. To make sure we return only whole numbers we use Math.floor().
+
+// Test random number generator
+console.log(randomNumber);
