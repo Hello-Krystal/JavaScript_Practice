@@ -12,8 +12,8 @@ console.log(`${userName} just asked ${userQuestion}`);
 randomNumber = Math.floor(Math.random() * 8);
 // Math.random() * 8 returns a value between 0 and 7. To make sure we return only whole numbers we use Math.floor().
 
-// Test random number generator
-console.log(randomNumber);
+// // Test random number generator
+// console.log(randomNumber);
 
 // Create a switch - control flow statement that takes in a randomNumber and assigns the empty variable a reply for the Magic Eight Ball to return 
 let eightBall = '';
