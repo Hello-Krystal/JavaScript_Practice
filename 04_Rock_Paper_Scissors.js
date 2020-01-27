@@ -33,7 +33,6 @@ const getUserChoice = userInput => {
   };
   
   const determineWinner = (userChoice, computerChoice) => {
-      
     // comparing userChoice vs computerChoice to determine the winner
     
     // create in case of tie
@@ -70,10 +69,11 @@ const getUserChoice = userInput => {
     }
   } 
   
+
   // Function to start game
   const playGame = () => {
 
-    // user makes selection here!
+    // *** user makes selection here ***
      const userChoice = getUserChoice('Hello-Krystal');
 
      // computer generated choice
