@@ -5,7 +5,7 @@ const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
     
     // if statement of userInput
-    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'hello-krystal') {
        return userInput;
     } else {
       return 'Error: You must select either Rock, Paper, or Scissors!'
@@ -64,13 +64,17 @@ const getUserChoice = userInput => {
         return 'Congrats, You Won!';
       }
     }
+
+    if (userChoice === 'hello-krystal') {
+        return 'Congrats, You Won!'
+    }
   } 
   
   // Function to start game
   const playGame = () => {
 
     // user makes selection here!
-     const userChoice = getUserChoice('rock');
+     const userChoice = getUserChoice('Hello-Krystal');
 
      // computer generated choice
      const computerChoice = getComputerChoice();
