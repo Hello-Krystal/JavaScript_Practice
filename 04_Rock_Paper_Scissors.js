@@ -64,4 +64,15 @@ const getUserChoice = userInput => {
         return 'Congrats, You Won!';
       }
     }
-  }
+  } 
+  
+  // Test cases to check determineWinner function
+  
+  // should return the user winning
+  console.log(determineWinner('rock', 'scissors'));
+  
+  // should return a draw
+  console.log(determineWinner('rock', 'rock'));
+  
+  // should return the user losing 
+  console.log(determineWinner('paper', 'scissors'));  
