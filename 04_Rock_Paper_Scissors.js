@@ -13,12 +13,37 @@ const getUserChoice = userInput => {
     
   };
   
-  // Test cases
-  // should return 'The user has selected rock'
-  console.log(getUserChoice('rock'));
+  // // Test cases #1
+  // // should return 'The user has selected rock'
+  // console.log(getUserChoice('rock'));
   
-  // should return 'The user has selected paper'
-  console.log(getUserChoice('paper'));
+  // // should return 'The user has selected paper'
+  // console.log(getUserChoice('paper'));
   
-  // should return 'Error: You must select either Rock, Paper, or Scissors!'
-  console.log(getUserChoice('krystal'));
+  // // should return 'Error: You must select either Rock, Paper, or Scissors!'
+  // console.log(getUserChoice('krystal'))
+  
+  
+  
+  // create a new function to generate the computer choice
+  const getComputerChoice = () => {
+    
+    const randomNumber = Math.floor(Math.random() * 3);
+    
+    switch(randomNumber) {
+      case 0:
+        return 'rock';
+        break;
+      case 1:
+        return 'paper';
+        break;
+      case 2:
+        return 'scissors';
+        break;
+    }
+    
+  };
+  
+  // Test cases #2
+  // prints random computer choice selection
+  console.log(getComputerChoice());  
