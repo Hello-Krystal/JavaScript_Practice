@@ -6,7 +6,7 @@ const getUserChoice = userInput => {
     
     // if statement of userInput
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-       return `The user has selected ${userInput}`;
+       return userInput;
     } else {
       return 'Error: You must select either Rock, Paper, or Scissors!'
     }
@@ -66,13 +66,21 @@ const getUserChoice = userInput => {
     }
   } 
   
-  // Test cases to check determineWinner function
+  // Function to start game
+  const playGame = () => {
+
+    // user makes selection here!
+     const userChoice = getUserChoice('rock');
+
+     // computer generated choice
+     const computerChoice = getComputerChoice();
+      
+    // outputs your choice vs computer choice
+     console.log('You selected: ' + userChoice);
+     console.log('The computer selected: ' + computerChoice);
+    
+    // calls determineWinner function
+     console.log(determineWinner(userChoice, computerChoice));
+  };
   
-  // should return the user winning
-  console.log(determineWinner('rock', 'scissors'));
-  
-  // should return a draw
-  console.log(determineWinner('rock', 'rock'));
-  
-  // should return the user losing 
-  console.log(determineWinner('paper', 'scissors'));  
+  playGame();
