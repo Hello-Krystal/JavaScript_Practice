@@ -10,26 +10,15 @@ const getUserChoice = userInput => {
     } else {
       return 'Error: You must select either Rock, Paper, or Scissors!'
     }
-    
   };
-  
-  // // Test cases #1
-  // // should return 'The user has selected rock'
-  // console.log(getUserChoice('rock'));
-  
-  // // should return 'The user has selected paper'
-  // console.log(getUserChoice('paper'));
-  
-  // // should return 'Error: You must select either Rock, Paper, or Scissors!'
-  // console.log(getUserChoice('krystal'))
-  
-  
   
   // create a new function to generate the computer choice
   const getComputerChoice = () => {
     
+    // generates random number between 0-2
     const randomNumber = Math.floor(Math.random() * 3);
-    
+  
+    // returns selection based on random number
     switch(randomNumber) {
       case 0:
         return 'rock';
@@ -41,9 +30,38 @@ const getUserChoice = userInput => {
         return 'scissors';
         break;
     }
-    
   };
   
-  // Test cases #2
-  // prints random computer choice selection
-  console.log(getComputerChoice());  
+  const determineWinner = (userChoice, computerChoice) => {
+      
+    // comparing userChoice vs computerChoice to determine the winner
+    
+    // create in case of tie
+    if (userChoice === computerChoice) {
+      return "It's a tie!"
+    } 
+    
+    if (userChoice === 'rock') {
+      if (computerChoice === 'paper') {
+        return 'You Lose!';
+      } else {
+        return 'Congrats, You Won!';
+      }
+    }
+    
+    if (userChoice === 'paper') {
+      if (computerChoice === 'scissors') {
+        return 'You Lose!';
+      } else {
+        return 'Congrats, You Won!';
+      }
+    }
+    
+    if (userChoice === 'scissors') {
+      if (computerChoice === 'rock') {
+        return 'You Lose!';
+      } else {
+        return 'Congrats, You Won!';
+      }
+    }
+  }
