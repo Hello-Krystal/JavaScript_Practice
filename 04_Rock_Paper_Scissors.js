@@ -6,9 +6,19 @@ const getUserChoice = userInput => {
     
     // if statement of userInput
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-      console.log(`The user has selected ${userInput}`);
+       return `The user has selected ${userInput}`;
     } else {
-      console.log('Error: You must select either Rock, Paper, or Scissors!')
+      return 'Error: You must select either Rock, Paper, or Scissors!'
     }
     
   };
+  
+  // Test cases
+  // should return 'The user has selected rock'
+  console.log(getUserChoice('rock'));
+  
+  // should return 'The user has selected paper'
+  console.log(getUserChoice('paper'));
+  
+  // should return 'Error: You must select either Rock, Paper, or Scissors!'
+  console.log(getUserChoice('krystal'));
