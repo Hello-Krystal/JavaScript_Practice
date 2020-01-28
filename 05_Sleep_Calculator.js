@@ -25,11 +25,6 @@ const getSleepHours = day => {
     }
 };
 
-// Test cases - printing random days of the week
-console.log(getSleepHours('monday'));
-console.log(getSleepHours('tuesday'));
-console.log(getSleepHours('saturday'));
-
 
 // Objective: 
 // get the total sleep hours I actually slept (getActualSleepHours)
@@ -47,7 +42,6 @@ const getActualSleepHours = () => {
     let week = Math.floor(Math.random() * 63);
 
     return week;
-
 };
 
 const getIdealSleepHours = () => {
@@ -57,9 +51,24 @@ const getIdealSleepHours = () => {
 
     // multiplied the ideal number of hours of sleep by each day of the week (7)
     return idealHours * 7;
-
 }; 
 
-// Test cases 
-console.log(getActualSleepHours());
-console.log(getIdealSleepHours());
+
+// calculates the number of sleep debt I've accumulated throughtout the week
+
+const calculateSleepDebt = () => {
+  
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours();
+  
+  if (actualSleepHours === idealSleepHours) {
+    return 'Good Job! You slept ' + idealSleepHours + ' hours, which is the ideal amount of sleep of this week!';
+  } else if (actualSleepHours > idealSleepHours) {
+    return 'You overslept by ' + (actualSleepHours - idealSleepHours) + ' hour(s) this week!';
+  } else {
+    return "You didn't sleep much this week. You are " + (idealSleepHours - actualSleepHours) + " hour(s) short. You need to get more rest";
+  }
+};
+
+// runs the sleep debt calculator
+console.log(calculateSleepDebt());
