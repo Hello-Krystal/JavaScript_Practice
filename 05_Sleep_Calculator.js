@@ -29,3 +29,37 @@ const getSleepHours = day => {
 console.log(getSleepHours('monday'));
 console.log(getSleepHours('tuesday'));
 console.log(getSleepHours('saturday'));
+
+
+// Objective: 
+// get the total sleep hours I actually slept (getActualSleepHours)
+// get the ideal sleep hours I should have slept(getIdealSleepHours)
+// calculate the number of sleep debt I've accumulated throughout the week
+
+const getActualSleepHours = () => {
+
+    // instead of adding each day of the week individually
+    // I created a week variable that generates a random sum for each day of the week
+    // variable:: (a) = days of week 
+    // variable:: (b) = hours of sleep 
+    // note: (because Math.random() * 8 would max at 7 hours return 9 for 8 hours max)
+    // formula:: (a) = 7 (b) = 9 ==> 7 * 9  = 63
+    let week = Math.floor(Math.random() * 63);
+
+    return week;
+
+};
+
+const getIdealSleepHours = () => {
+
+    // the ideal hours of sleep you should get each night is 8 hours
+    let idealHours = 8;
+
+    // multiplied the ideal number of hours of sleep by each day of the week (7)
+    return idealHours * 7;
+
+}; 
+
+// Test cases 
+console.log(getActualSleepHours());
+console.log(getIdealSleepHours());
